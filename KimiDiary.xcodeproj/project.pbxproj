@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8188D25424BE00A30088F5FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188D25324BE00A30088F5FF /* AppDelegate.swift */; };
+		8188D25624BE00A30088F5FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188D25524BE00A30088F5FF /* SceneDelegate.swift */; };
+		8188D25D24BE00A60088F5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8188D25C24BE00A60088F5FF /* Assets.xcassets */; };
+		8188D26024BE00A60088F5FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8188D25E24BE00A60088F5FF /* LaunchScreen.storyboard */; };
+		8188D26B24BE00A70088F5FF /* KimiDiaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188D26A24BE00A70088F5FF /* KimiDiaryTests.swift */; };
+		8188D27624BE00A70088F5FF /* KimiDiaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188D27524BE00A70088F5FF /* KimiDiaryUITests.swift */; };
+		8188D28424BE01ED0088F5FF /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188D28324BE01ED0088F5FF /* AppRouter.swift */; };
+		8188D28724BE02920088F5FF /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188D28624BE02920088F5FF /* UserDefaultsManager.swift */; };
+		8188D28A24BE03150088F5FF /* MenuDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188D28924BE03150088F5FF /* MenuDiaryViewController.swift */; };
+		8188D28E24BE08C60088F5FF /* UIViewController+Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188D28D24BE08C60088F5FF /* UIViewController+Child.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8188D26724BE00A70088F5FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8188D24824BE00A30088F5FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8188D24F24BE00A30088F5FF;
+			remoteInfo = KimiDiary;
+		};
+		8188D27224BE00A70088F5FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8188D24824BE00A30088F5FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8188D24F24BE00A30088F5FF;
+			remoteInfo = KimiDiary;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8188D25024BE00A30088F5FF /* KimiDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KimiDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8188D25324BE00A30088F5FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8188D25524BE00A30088F5FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8188D25C24BE00A60088F5FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8188D25F24BE00A60088F5FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8188D26124BE00A60088F5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8188D26624BE00A70088F5FF /* KimiDiaryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KimiDiaryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8188D26A24BE00A70088F5FF /* KimiDiaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KimiDiaryTests.swift; sourceTree = "<group>"; };
+		8188D26C24BE00A70088F5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8188D27124BE00A70088F5FF /* KimiDiaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KimiDiaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8188D27524BE00A70088F5FF /* KimiDiaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KimiDiaryUITests.swift; sourceTree = "<group>"; };
+		8188D27724BE00A70088F5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8188D28324BE01ED0088F5FF /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		8188D28624BE02920088F5FF /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		8188D28924BE03150088F5FF /* MenuDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDiaryViewController.swift; sourceTree = "<group>"; };
+		8188D28D24BE08C60088F5FF /* UIViewController+Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Child.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8188D24D24BE00A30088F5FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8188D26324BE00A70088F5FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8188D26E24BE00A70088F5FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8188D24724BE00A30088F5FF = {
+			isa = PBXGroup;
+			children = (
+				8188D25224BE00A30088F5FF /* KimiDiary */,
+				8188D26924BE00A70088F5FF /* KimiDiaryTests */,
+				8188D27424BE00A70088F5FF /* KimiDiaryUITests */,
+				8188D25124BE00A30088F5FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8188D25124BE00A30088F5FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8188D25024BE00A30088F5FF /* KimiDiary.app */,
+				8188D26624BE00A70088F5FF /* KimiDiaryTests.xctest */,
+				8188D27124BE00A70088F5FF /* KimiDiaryUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8188D25224BE00A30088F5FF /* KimiDiary */ = {
+			isa = PBXGroup;
+			children = (
+				8188D28C24BE08750088F5FF /* Extensions */,
+				8188D28B24BE031A0088F5FF /* Controller */,
+				8188D28824BE02970088F5FF /* Manager */,
+				8188D28524BE02730088F5FF /* Config */,
+				8188D25C24BE00A60088F5FF /* Assets.xcassets */,
+				8188D25E24BE00A60088F5FF /* LaunchScreen.storyboard */,
+				8188D26124BE00A60088F5FF /* Info.plist */,
+			);
+			path = KimiDiary;
+			sourceTree = "<group>";
+		};
+		8188D26924BE00A70088F5FF /* KimiDiaryTests */ = {
+			isa = PBXGroup;
+			children = (
+				8188D26A24BE00A70088F5FF /* KimiDiaryTests.swift */,
+				8188D26C24BE00A70088F5FF /* Info.plist */,
+			);
+			path = KimiDiaryTests;
+			sourceTree = "<group>";
+		};
+		8188D27424BE00A70088F5FF /* KimiDiaryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8188D27524BE00A70088F5FF /* KimiDiaryUITests.swift */,
+				8188D27724BE00A70088F5FF /* Info.plist */,
+			);
+			path = KimiDiaryUITests;
+			sourceTree = "<group>";
+		};
+		8188D28524BE02730088F5FF /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				8188D28324BE01ED0088F5FF /* AppRouter.swift */,
+				8188D25324BE00A30088F5FF /* AppDelegate.swift */,
+				8188D25524BE00A30088F5FF /* SceneDelegate.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		8188D28824BE02970088F5FF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				8188D28624BE02920088F5FF /* UserDefaultsManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		8188D28B24BE031A0088F5FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8188D28924BE03150088F5FF /* MenuDiaryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8188D28C24BE08750088F5FF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8188D28D24BE08C60088F5FF /* UIViewController+Child.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8188D24F24BE00A30088F5FF /* KimiDiary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8188D27A24BE00A70088F5FF /* Build configuration list for PBXNativeTarget "KimiDiary" */;
+			buildPhases = (
+				8188D24C24BE00A30088F5FF /* Sources */,
+				8188D24D24BE00A30088F5FF /* Frameworks */,
+				8188D24E24BE00A30088F5FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KimiDiary;
+			productName = KimiDiary;
+			productReference = 8188D25024BE00A30088F5FF /* KimiDiary.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8188D26524BE00A70088F5FF /* KimiDiaryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8188D27D24BE00A70088F5FF /* Build configuration list for PBXNativeTarget "KimiDiaryTests" */;
+			buildPhases = (
+				8188D26224BE00A70088F5FF /* Sources */,
+				8188D26324BE00A70088F5FF /* Frameworks */,
+				8188D26424BE00A70088F5FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8188D26824BE00A70088F5FF /* PBXTargetDependency */,
+			);
+			name = KimiDiaryTests;
+			productName = KimiDiaryTests;
+			productReference = 8188D26624BE00A70088F5FF /* KimiDiaryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8188D27024BE00A70088F5FF /* KimiDiaryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8188D28024BE00A70088F5FF /* Build configuration list for PBXNativeTarget "KimiDiaryUITests" */;
+			buildPhases = (
+				8188D26D24BE00A70088F5FF /* Sources */,
+				8188D26E24BE00A70088F5FF /* Frameworks */,
+				8188D26F24BE00A70088F5FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8188D27324BE00A70088F5FF /* PBXTargetDependency */,
+			);
+			name = KimiDiaryUITests;
+			productName = KimiDiaryUITests;
+			productReference = 8188D27124BE00A70088F5FF /* KimiDiaryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8188D24824BE00A30088F5FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Vinicius Mesquita";
+				TargetAttributes = {
+					8188D24F24BE00A30088F5FF = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					8188D26524BE00A70088F5FF = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 8188D24F24BE00A30088F5FF;
+					};
+					8188D27024BE00A70088F5FF = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 8188D24F24BE00A30088F5FF;
+					};
+				};
+			};
+			buildConfigurationList = 8188D24B24BE00A30088F5FF /* Build configuration list for PBXProject "KimiDiary" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8188D24724BE00A30088F5FF;
+			productRefGroup = 8188D25124BE00A30088F5FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8188D24F24BE00A30088F5FF /* KimiDiary */,
+				8188D26524BE00A70088F5FF /* KimiDiaryTests */,
+				8188D27024BE00A70088F5FF /* KimiDiaryUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8188D24E24BE00A30088F5FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8188D26024BE00A60088F5FF /* LaunchScreen.storyboard in Resources */,
+				8188D25D24BE00A60088F5FF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8188D26424BE00A70088F5FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8188D26F24BE00A70088F5FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8188D24C24BE00A30088F5FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8188D25424BE00A30088F5FF /* AppDelegate.swift in Sources */,
+				8188D25624BE00A30088F5FF /* SceneDelegate.swift in Sources */,
+				8188D28724BE02920088F5FF /* UserDefaultsManager.swift in Sources */,
+				8188D28424BE01ED0088F5FF /* AppRouter.swift in Sources */,
+				8188D28A24BE03150088F5FF /* MenuDiaryViewController.swift in Sources */,
+				8188D28E24BE08C60088F5FF /* UIViewController+Child.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8188D26224BE00A70088F5FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8188D26B24BE00A70088F5FF /* KimiDiaryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8188D26D24BE00A70088F5FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8188D27624BE00A70088F5FF /* KimiDiaryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8188D26824BE00A70088F5FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8188D24F24BE00A30088F5FF /* KimiDiary */;
+			targetProxy = 8188D26724BE00A70088F5FF /* PBXContainerItemProxy */;
+		};
+		8188D27324BE00A70088F5FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8188D24F24BE00A30088F5FF /* KimiDiary */;
+			targetProxy = 8188D27224BE00A70088F5FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8188D25E24BE00A60088F5FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8188D25F24BE00A60088F5FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8188D27824BE00A70088F5FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8188D27924BE00A70088F5FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8188D27B24BE00A70088F5FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KimiDiary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = viniciusmesquita.KimiDiary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8188D27C24BE00A70088F5FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KimiDiary/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = viniciusmesquita.KimiDiary;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8188D27E24BE00A70088F5FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KimiDiaryTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = viniciusmesquita.KimiDiaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KimiDiary.app/KimiDiary";
+			};
+			name = Debug;
+		};
+		8188D27F24BE00A70088F5FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KimiDiaryTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = viniciusmesquita.KimiDiaryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KimiDiary.app/KimiDiary";
+			};
+			name = Release;
+		};
+		8188D28124BE00A70088F5FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KimiDiaryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = viniciusmesquita.KimiDiaryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KimiDiary;
+			};
+			name = Debug;
+		};
+		8188D28224BE00A70088F5FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KimiDiaryUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = viniciusmesquita.KimiDiaryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KimiDiary;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8188D24B24BE00A30088F5FF /* Build configuration list for PBXProject "KimiDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8188D27824BE00A70088F5FF /* Debug */,
+				8188D27924BE00A70088F5FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8188D27A24BE00A70088F5FF /* Build configuration list for PBXNativeTarget "KimiDiary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8188D27B24BE00A70088F5FF /* Debug */,
+				8188D27C24BE00A70088F5FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8188D27D24BE00A70088F5FF /* Build configuration list for PBXNativeTarget "KimiDiaryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8188D27E24BE00A70088F5FF /* Debug */,
+				8188D27F24BE00A70088F5FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8188D28024BE00A70088F5FF /* Build configuration list for PBXNativeTarget "KimiDiaryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8188D28124BE00A70088F5FF /* Debug */,
+				8188D28224BE00A70088F5FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8188D24824BE00A30088F5FF /* Project object */;
+}
