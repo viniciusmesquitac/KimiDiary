@@ -14,13 +14,6 @@ class MenuDiaryViewController: UIViewController {
     
     let toolbar = MenuToolbarController()
     
-    lazy var toolbarView: ToolbarView = {
-        let view = ToolbarView()
-        view.backgroundColor = .white
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .blueTheme
@@ -29,7 +22,6 @@ class MenuDiaryViewController: UIViewController {
     }
     
     func buildViewHierarchy() {
-        view.addSubview(toolbarView)
         add(tableView)
         add(toolbar)
     }
@@ -49,10 +41,10 @@ class MenuDiaryViewController: UIViewController {
         ])
         
         NSLayoutConstraint.activate([
-            toolbarView.topAnchor.constraint(equalTo: tableView.view.bottomAnchor),
-            toolbarView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            toolbarView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            toolbarView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
+            toolbar.view.topAnchor.constraint(equalTo: tableView.view.bottomAnchor),
+            toolbar.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            toolbar.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            toolbar.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
         
     }

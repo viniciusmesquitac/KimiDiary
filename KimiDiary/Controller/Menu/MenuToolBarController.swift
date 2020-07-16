@@ -10,15 +10,15 @@ import UIKit
 
 class MenuToolbarController: UIViewController {
     
-    lazy var toolbar: UIToolbar = {
-        let toolbar = UIToolbar()
-        toolbar.backgroundColor = .black
-        toolbar.translatesAutoresizingMaskIntoConstraints = false
-        return toolbar
+    lazy var toolbar: MenuToolbarView = {
+        let view = MenuToolbarView()
+        view.backgroundColor = .white
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
     
     lazy var customSearch: UIView = {
-        let view = ToolbarView()
+        let view = MenuToolbarView()
         view.sizeToFit()
         return view
     }()
@@ -29,13 +29,6 @@ class MenuToolbarController: UIViewController {
         self.view.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(toolbar)
-        
-        toolbar.items = [
-            UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil),
-            UIBarButtonItem(barButtonSystemItem: .search, target: nil, action: nil),
-            UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
-        ]
-        
         setupContraint()
     }
     

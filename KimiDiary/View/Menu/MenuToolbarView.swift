@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ToolbarView: UIView {
+class MenuToolbarView: UIView {
     
     lazy var searchBar: SearchBarView = {
        let view = SearchBarView()
