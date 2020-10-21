@@ -31,7 +31,6 @@ class MenuHeaderView: UIView {
         
         addSubview(username)
         
-        
         imageView.layer.masksToBounds = false
         imageView.layer.borderWidth = 1
         imageView.layer.cornerRadius = 32

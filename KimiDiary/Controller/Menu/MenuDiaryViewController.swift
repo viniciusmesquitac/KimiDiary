@@ -17,6 +17,7 @@ class MenuDiaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .blueTheme
+        self.navigationController?.navigationBar.isHidden = true
         buildViewHierarchy()
         setupConstraints()
     }
@@ -26,8 +27,8 @@ class MenuDiaryViewController: UIViewController {
         add(toolbar)
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     func setupConstraints() {

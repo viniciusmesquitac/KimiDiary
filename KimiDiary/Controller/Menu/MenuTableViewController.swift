@@ -10,15 +10,13 @@ import UIKit
 
 class MenuTableViewController: UITableViewController {
     
-    var presentTransition: UIViewControllerAnimatedTransitioning?
-    var dismissTransition: UIViewControllerAnimatedTransitioning?
-    
+//    var presentTransition: UIViewControllerAnimatedTransitioning?
+//    var dismissTransition: UIViewControllerAnimatedTransitioning?
     let items = ["Emergency", "@User2323", "DIARY", "Prohibited Matter"]
     
     override func viewDidLoad() {
         self.view.translatesAutoresizingMaskIntoConstraints = false
         self.tableView.rowHeight = 80
-//        self.tableView.isScrollEnabled = false
         self.tableView.separatorColor = .blueTheme
         self.tableView.backgroundView = nil
         self.tableView.scrollsToTop = false
@@ -63,58 +61,8 @@ class MenuTableViewController: UITableViewController {
         let viewController = DiaryViewController()
         viewController.isModalInPresentation = false
         viewController.modalPresentationStyle = .fullScreen
-        showSettings(controller: viewController, animated: false)
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
-
-extension MenuTableViewController: UIViewControllerTransitioningDelegate {
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return presentTransition
-    }
-
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return dismissTransition
-    }
-}
-
-extension MenuTableViewController {
-
-    func showSettings(controller: UIViewController, animated: Bool) {
-
-        presentTransition = RightToLeftTransition()
-        dismissTransition = LeftToRightTransition()
-
-        controller.modalPresentationStyle = .custom
-        controller.transitioningDelegate = self
-
-        present(controller, animated: true, completion: { [weak self] in
-            self?.presentTransition = nil
-        })
-    }
-
-}
-
-
-//extension MenuTableViewController {
-//
-//    func presentDetail(_ viewControllerToPresent: UIViewController) {
-//        let transition = CATransition()
-//        transition.duration = 0.5
-//        transition.type = CATransitionType.push
-//        transition.subtype = CATransitionSubtype.fromRight
-//        self.view.window!.layer.add(transition, forKey: kCATransition)
-//
-//        present(viewControllerToPresent, animated: false)
-//    }
-//
-//    func dismissDetail() {
-//        let transition = CATransition()
-//        transition.duration = 0.5
-//        transition.type = CATransitionType.push
-//        transition.subtype = CATransitionSubtype.fromLeft
-//        self.view.window!.layer.add(transition, forKey: kCATransition)
-//
-//        dismiss(animated: false)
-//    }
-//}

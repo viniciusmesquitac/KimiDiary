@@ -28,7 +28,7 @@ class EntriesToolbarController: UIViewController {
     }
     
     @objc func menuButtonAction() {
-        dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func setupConstraints() {

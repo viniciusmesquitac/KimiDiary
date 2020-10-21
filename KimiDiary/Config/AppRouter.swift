@@ -23,7 +23,7 @@ struct AppRouter {
                         
             switch state {
             case .firstLogin:
-                sendToOnboard()
+                sendToMainController()
             case .alreadyLogged:
                 sendToMainController()
             }
@@ -40,7 +40,8 @@ struct AppRouter {
     
     private func sendToMainController() {
         let viewController = MenuDiaryViewController()
-        window?.rootViewController = viewController
+        let navigationController = UINavigationController(rootViewController: viewController)
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
     

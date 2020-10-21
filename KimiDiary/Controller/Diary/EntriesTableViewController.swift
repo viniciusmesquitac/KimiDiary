@@ -15,7 +15,8 @@ class EntriesTableViewController: UITableViewController {
         
         self.view.translatesAutoresizingMaskIntoConstraints = false
         self.tableView.rowHeight = 80
-        self.tableView.register(EntriesDiaryTableViewCell.self, forCellReuseIdentifier: EntriesDiaryTableViewCell.identifier)
+        self.tableView
+            .register(EntriesDiaryTableViewCell.self, forCellReuseIdentifier: EntriesDiaryTableViewCell.identifier)
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
