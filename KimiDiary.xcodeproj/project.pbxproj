@@ -72,7 +72,6 @@
 		8188D29424BE11180088F5FF /* MenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeaderView.swift; sourceTree = "<group>"; };
 		8188D29624BE12CF0088F5FF /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		8188D29824BE2F830088F5FF /* MenuToolBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuToolBarController.swift; sourceTree = "<group>"; };
-		8188D29A24BE3A4E0088F5FF /* Unknown */ = {isa = PBXFileReference; lastKnownFileType = file; name = Unknown; path = ../../../../Downloads/Unknown; sourceTree = "<group>"; };
 		8188D29B24BE81F60088F5FF /* MenuToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuToolbarView.swift; sourceTree = "<group>"; };
 		8188D29D24BE91860088F5FF /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		8188D2A124BEB77F0088F5FF /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
@@ -165,7 +164,6 @@
 		8188D28524BE02730088F5FF /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				8188D29A24BE3A4E0088F5FF /* Unknown */,
 				8188D28324BE01ED0088F5FF /* AppRouter.swift */,
 				8188D25324BE00A30088F5FF /* AppDelegate.swift */,
 				8188D25524BE00A30088F5FF /* SceneDelegate.swift */,
@@ -565,6 +563,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KimiDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -582,6 +581,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KimiDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

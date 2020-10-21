@@ -11,7 +11,7 @@ import UIKit
 class DiaryViewController: UIViewController {
     
     let entriesToolbarController = EntriesToolbarController()
-    let entriesTableViewController = EntriesTableViewController(style: .grouped)
+    let entriesTableViewController = EntriesTableViewController(style: .insetGrouped)
     
     override func viewDidLoad() {
         super.viewDidLoad()
