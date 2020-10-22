@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		815066882541A24D00BC8CC2 /* Diary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 815066862541A24D00BC8CC2 /* Diary.xcdatamodeld */; };
 		8188D25424BE00A30088F5FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188D25324BE00A30088F5FF /* AppDelegate.swift */; };
 		8188D25624BE00A30088F5FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188D25524BE00A30088F5FF /* SceneDelegate.swift */; };
 		8188D25D24BE00A60088F5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8188D25C24BE00A60088F5FF /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		815066872541A24D00BC8CC2 /* Diary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diary.xcdatamodel; sourceTree = "<group>"; };
 		8188D25024BE00A30088F5FF /* KimiDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KimiDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8188D25324BE00A30088F5FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8188D25524BE00A30088F5FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8150668C2541A46800BC8CC2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8188D24724BE00A30088F5FF = {
 			isa = PBXGroup;
 			children = (
@@ -131,12 +140,14 @@
 		8188D25224BE00A30088F5FF /* KimiDiary */ = {
 			isa = PBXGroup;
 			children = (
+				8150668C2541A46800BC8CC2 /* ViewModel */,
 				8188D29324BE10FD0088F5FF /* View */,
 				8188D28C24BE08750088F5FF /* Extensions */,
 				8188D28B24BE031A0088F5FF /* Controller */,
 				8188D28824BE02970088F5FF /* Manager */,
 				8188D28524BE02730088F5FF /* Config */,
 				8188D25C24BE00A60088F5FF /* Assets.xcassets */,
+				815066862541A24D00BC8CC2 /* Diary.xcdatamodeld */,
 				8188D25E24BE00A60088F5FF /* LaunchScreen.storyboard */,
 				8188D26124BE00A60088F5FF /* Info.plist */,
 			);
@@ -311,7 +322,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Vinicius Mesquita";
 				TargetAttributes = {
 					8188D24F24BE00A30088F5FF = {
@@ -396,6 +407,7 @@
 				8188D29E24BE91860088F5FF /* SearchBarView.swift in Sources */,
 				8188D2A224BEB77F0088F5FF /* DiaryViewController.swift in Sources */,
 				8188D29524BE11180088F5FF /* MenuHeaderView.swift in Sources */,
+				815066882541A24D00BC8CC2 /* Diary.xcdatamodeld in Sources */,
 				8188D29724BE12CF0088F5FF /* UIColor.swift in Sources */,
 				8188D29924BE2F830088F5FF /* MenuToolBarController.swift in Sources */,
 			);
@@ -470,6 +482,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -530,6 +543,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -714,6 +728,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		815066862541A24D00BC8CC2 /* Diary.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				815066872541A24D00BC8CC2 /* Diary.xcdatamodel */,
+			);
+			currentVersion = 815066872541A24D00BC8CC2 /* Diary.xcdatamodel */;
+			path = Diary.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8188D24824BE00A30088F5FF /* Project object */;
 }

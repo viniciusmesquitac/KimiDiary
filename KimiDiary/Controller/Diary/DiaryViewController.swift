@@ -26,6 +26,8 @@ class DiaryViewController: UIViewController {
         add(entriesToolbarController)
     }
     
+   
+    
     func setupConstraints() {
         
         NSLayoutConstraint.activate([

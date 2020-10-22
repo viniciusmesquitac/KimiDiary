@@ -14,11 +14,13 @@ class EntriesTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.view.translatesAutoresizingMaskIntoConstraints = false
-        self.tableView.rowHeight = 80
+        self.tableView.rowHeight = 95
+        self.tableView.separatorStyle = .none
         self.tableView
             .register(EntriesDiaryTableViewCell.self, forCellReuseIdentifier: EntriesDiaryTableViewCell.identifier)
     }
     
+    // MARK: Data Source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }
@@ -29,6 +31,8 @@ class EntriesTableViewController: UITableViewController {
         return cell
     }
     
+    // MARK: Size Configuration
+    
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 115
     }
@@ -37,5 +41,13 @@ class EntriesTableViewController: UITableViewController {
         let header = HeaderTableViewDiary()
         return header
     }
+    
+    
+    // MARK: Selection
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selection")
+    }
+
     
 }
