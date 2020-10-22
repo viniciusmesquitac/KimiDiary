@@ -8,6 +8,13 @@
 
 import UIKit
 
+enum MenuToolbarImages {
+    static let menu = UIImage(named: "menu")
+    static let gear = UIImage(named: "gear")
+    static let lupe = UIImage(named: "lupe")
+    static let pencil = UIImage(named: "pencil")
+}
+
 class MenuToolbarView: UIView {
     
     lazy var searchBar: SearchBarView = {
@@ -20,7 +27,7 @@ class MenuToolbarView: UIView {
     
     let buttonItem: UIButton = {
         let buttonItem = UIButton()
-        buttonItem.setImage(UIImage(named: "gear"), for: .normal)
+        buttonItem.setImage(MenuToolbarImages.gear, for: .normal)
         buttonItem.translatesAutoresizingMaskIntoConstraints = false
         return buttonItem
     }()

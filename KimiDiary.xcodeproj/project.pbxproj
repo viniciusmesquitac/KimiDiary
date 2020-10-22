@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		815066882541A24D00BC8CC2 /* Diary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 815066862541A24D00BC8CC2 /* Diary.xcdatamodeld */; };
+		815066F82541BDE900BC8CC2 /* WriteEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815066F72541BDE900BC8CC2 /* WriteEntryViewController.swift */; };
+		815067092541C3B500BC8CC2 /* WriteEntryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815067082541C3B500BC8CC2 /* WriteEntryContentView.swift */; };
 		8188D25424BE00A30088F5FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188D25324BE00A30088F5FF /* AppDelegate.swift */; };
 		8188D25624BE00A30088F5FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188D25524BE00A30088F5FF /* SceneDelegate.swift */; };
 		8188D25D24BE00A60088F5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8188D25C24BE00A60088F5FF /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		815066872541A24D00BC8CC2 /* Diary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diary.xcdatamodel; sourceTree = "<group>"; };
+		815066F72541BDE900BC8CC2 /* WriteEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteEntryViewController.swift; sourceTree = "<group>"; };
+		815067082541C3B500BC8CC2 /* WriteEntryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteEntryContentView.swift; sourceTree = "<group>"; };
 		8188D25024BE00A30088F5FF /* KimiDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KimiDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8188D25324BE00A30088F5FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8188D25524BE00A30088F5FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,11 +114,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8150668C2541A46800BC8CC2 /* ViewModel */ = {
+		815066F62541BD9800BC8CC2 /* Write */ = {
 			isa = PBXGroup;
 			children = (
+				815066F72541BDE900BC8CC2 /* WriteEntryViewController.swift */,
 			);
-			path = ViewModel;
+			path = Write;
+			sourceTree = "<group>";
+		};
+		815067072541C39700BC8CC2 /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				815067082541C3B500BC8CC2 /* WriteEntryContentView.swift */,
+			);
+			path = Write;
 			sourceTree = "<group>";
 		};
 		8188D24724BE00A30088F5FF = {
@@ -140,7 +153,6 @@
 		8188D25224BE00A30088F5FF /* KimiDiary */ = {
 			isa = PBXGroup;
 			children = (
-				8150668C2541A46800BC8CC2 /* ViewModel */,
 				8188D29324BE10FD0088F5FF /* View */,
 				8188D28C24BE08750088F5FF /* Extensions */,
 				8188D28B24BE031A0088F5FF /* Controller */,
@@ -193,8 +205,9 @@
 		8188D28B24BE031A0088F5FF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8188D2A024BEB76B0088F5FF /* Diary */,
+				815066F62541BD9800BC8CC2 /* Write */,
 				8188D29F24BEB5C50088F5FF /* Menu */,
+				8188D2A024BEB76B0088F5FF /* Diary */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -213,6 +226,7 @@
 		8188D29324BE10FD0088F5FF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				815067072541C39700BC8CC2 /* Write */,
 				8188D2B124BFEC140088F5FF /* Cells */,
 				8188D2AF24BFEBE10088F5FF /* Menu */,
 				8188D2A724BF36140088F5FF /* EntriesToolbarView.swift */,
@@ -224,9 +238,9 @@
 		8188D29F24BEB5C50088F5FF /* Menu */ = {
 			isa = PBXGroup;
 			children = (
-				8188D28924BE03150088F5FF /* MenuDiaryViewController.swift */,
-				8188D29124BE10B40088F5FF /* MenuTableViewController.swift */,
 				8188D29824BE2F830088F5FF /* MenuToolBarController.swift */,
+				8188D29124BE10B40088F5FF /* MenuTableViewController.swift */,
+				8188D28924BE03150088F5FF /* MenuDiaryViewController.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -395,6 +409,7 @@
 				8188D25424BE00A30088F5FF /* AppDelegate.swift in Sources */,
 				8188D25624BE00A30088F5FF /* SceneDelegate.swift in Sources */,
 				8188D2A824BF36140088F5FF /* EntriesToolbarView.swift in Sources */,
+				815067092541C3B500BC8CC2 /* WriteEntryContentView.swift in Sources */,
 				8188D29C24BE81F60088F5FF /* MenuToolbarView.swift in Sources */,
 				8188D28724BE02920088F5FF /* UserDefaultsManager.swift in Sources */,
 				8188D28424BE01ED0088F5FF /* AppRouter.swift in Sources */,
@@ -406,6 +421,7 @@
 				8188D2AC24BFDFED0088F5FF /* EntriesTableViewController.swift in Sources */,
 				8188D29E24BE91860088F5FF /* SearchBarView.swift in Sources */,
 				8188D2A224BEB77F0088F5FF /* DiaryViewController.swift in Sources */,
+				815066F82541BDE900BC8CC2 /* WriteEntryViewController.swift in Sources */,
 				8188D29524BE11180088F5FF /* MenuHeaderView.swift in Sources */,
 				815066882541A24D00BC8CC2 /* Diary.xcdatamodeld in Sources */,
 				8188D29724BE12CF0088F5FF /* UIColor.swift in Sources */,

@@ -8,6 +8,19 @@
 
 import UIKit
 
+
+enum Items: String, CaseIterable {
+    case emergency = "Emergency"
+    case diary = "DIARY"
+    case prohibited = "Prohibited Matter"
+}
+
+enum MenuTableImages {
+    static let emergency = UIImage(named: "emergency")
+    static let diary = UIImage(named: "diary")
+    static let prohibited = UIImage(named: "prohibited")
+}
+
 class MenuTableViewController: UITableViewController {
     
 //    var presentTransition: UIViewControllerAnimatedTransitioning?
@@ -25,14 +38,23 @@ class MenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.count
+        return Items.allCases.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         cell.accessoryType = .disclosureIndicator
-        cell.textLabel?.text = items[indexPath.row]
-        cell.imageView?.image = UIImage(named: "gear")
+        cell.textLabel?.text = Items.allCases[indexPath.row].rawValue
+        
+        
+        switch Items.allCases[indexPath.row] {
+        case .emergency:
+            cell.imageView?.image = MenuTableImages.emergency
+        case .diary:
+            cell.imageView?.image = MenuTableImages.diary
+        case .prohibited:
+            cell.imageView?.image = MenuTableImages.prohibited
+        }
         cell.textLabel?.textColor = .blueTheme
         return cell
     }
@@ -42,7 +64,7 @@ class MenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 149
+        return 400
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

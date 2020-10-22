@@ -12,7 +12,7 @@ class SearchBarView: UIButton {
     
     let buttonItem: UIButton = {
         let buttonItem = UIButton()
-        buttonItem.setImage(UIImage(named: "lupa"), for: .normal)
+        buttonItem.setImage(MenuToolbarImages.lupe, for: .normal)
         buttonItem.translatesAutoresizingMaskIntoConstraints = false
         return buttonItem
     }()
