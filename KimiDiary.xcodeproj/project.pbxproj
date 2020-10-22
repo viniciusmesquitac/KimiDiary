@@ -10,6 +10,9 @@
 		815066882541A24D00BC8CC2 /* Diary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 815066862541A24D00BC8CC2 /* Diary.xcdatamodeld */; };
 		815066F82541BDE900BC8CC2 /* WriteEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815066F72541BDE900BC8CC2 /* WriteEntryViewController.swift */; };
 		815067092541C3B500BC8CC2 /* WriteEntryContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815067082541C3B500BC8CC2 /* WriteEntryContentView.swift */; };
+		8150670F2541D4A700BC8CC2 /* Daily+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150670D2541D4A700BC8CC2 /* Daily+CoreDataClass.swift */; };
+		815067102541D4A700BC8CC2 /* Daily+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8150670E2541D4A700BC8CC2 /* Daily+CoreDataProperties.swift */; };
+		8150671A2541D50000BC8CC2 /* CoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815067192541D50000BC8CC2 /* CoreService.swift */; };
 		8188D25424BE00A30088F5FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188D25324BE00A30088F5FF /* AppDelegate.swift */; };
 		8188D25624BE00A30088F5FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8188D25524BE00A30088F5FF /* SceneDelegate.swift */; };
 		8188D25D24BE00A60088F5FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8188D25C24BE00A60088F5FF /* Assets.xcassets */; };
@@ -57,6 +60,9 @@
 		815066872541A24D00BC8CC2 /* Diary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diary.xcdatamodel; sourceTree = "<group>"; };
 		815066F72541BDE900BC8CC2 /* WriteEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteEntryViewController.swift; sourceTree = "<group>"; };
 		815067082541C3B500BC8CC2 /* WriteEntryContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteEntryContentView.swift; sourceTree = "<group>"; };
+		8150670D2541D4A700BC8CC2 /* Daily+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Daily+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8150670E2541D4A700BC8CC2 /* Daily+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Daily+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		815067192541D50000BC8CC2 /* CoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreService.swift; sourceTree = "<group>"; };
 		8188D25024BE00A30088F5FF /* KimiDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KimiDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8188D25324BE00A30088F5FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8188D25524BE00A30088F5FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +136,23 @@
 			path = Write;
 			sourceTree = "<group>";
 		};
+		815067142541D4BB00BC8CC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8150670D2541D4A700BC8CC2 /* Daily+CoreDataClass.swift */,
+				8150670E2541D4A700BC8CC2 /* Daily+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		815067182541D4D300BC8CC2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				815067192541D50000BC8CC2 /* CoreService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		8188D24724BE00A30088F5FF = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +176,8 @@
 		8188D25224BE00A30088F5FF /* KimiDiary */ = {
 			isa = PBXGroup;
 			children = (
+				815067182541D4D300BC8CC2 /* Service */,
+				815067142541D4BB00BC8CC2 /* Model */,
 				8188D29324BE10FD0088F5FF /* View */,
 				8188D28C24BE08750088F5FF /* Extensions */,
 				8188D28B24BE031A0088F5FF /* Controller */,
@@ -406,8 +431,10 @@
 				8188D2B324BFEC3A0088F5FF /* EntriesDiaryTableViewCell.swift in Sources */,
 				8188D2AE24BFE3280088F5FF /* HeaderTableViewDiary.swift in Sources */,
 				8188D2A424BF2FA20088F5FF /* Transition.swift in Sources */,
+				8150670F2541D4A700BC8CC2 /* Daily+CoreDataClass.swift in Sources */,
 				8188D25424BE00A30088F5FF /* AppDelegate.swift in Sources */,
 				8188D25624BE00A30088F5FF /* SceneDelegate.swift in Sources */,
+				8150671A2541D50000BC8CC2 /* CoreService.swift in Sources */,
 				8188D2A824BF36140088F5FF /* EntriesToolbarView.swift in Sources */,
 				815067092541C3B500BC8CC2 /* WriteEntryContentView.swift in Sources */,
 				8188D29C24BE81F60088F5FF /* MenuToolbarView.swift in Sources */,
@@ -419,6 +446,7 @@
 				8188D28E24BE08C60088F5FF /* UIViewController+Child.swift in Sources */,
 				8188D2A624BF32BE0088F5FF /* EntriesToolbarController.swift in Sources */,
 				8188D2AC24BFDFED0088F5FF /* EntriesTableViewController.swift in Sources */,
+				815067102541D4A700BC8CC2 /* Daily+CoreDataProperties.swift in Sources */,
 				8188D29E24BE91860088F5FF /* SearchBarView.swift in Sources */,
 				8188D2A224BEB77F0088F5FF /* DiaryViewController.swift in Sources */,
 				815066F82541BDE900BC8CC2 /* WriteEntryViewController.swift in Sources */,
@@ -593,7 +621,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3A46XCK2VP;
 				INFOPLIST_FILE = KimiDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -611,7 +639,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 3A46XCK2VP;
 				INFOPLIST_FILE = KimiDiary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

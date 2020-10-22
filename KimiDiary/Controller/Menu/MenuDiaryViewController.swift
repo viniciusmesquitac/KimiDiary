@@ -11,7 +11,6 @@ import UIKit
 class MenuDiaryViewController: UIViewController {
     
     let tableView = MenuTableViewController(style: .grouped)
-    
     let toolbar = MenuToolbarController()
     
     override func viewDidLoad() {
@@ -33,19 +32,21 @@ class MenuDiaryViewController: UIViewController {
     
     func setupConstraints() {
         
+        
+        NSLayoutConstraint.activate([
+            toolbar.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            toolbar.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+            toolbar.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            toolbar.view.heightAnchor.constraint(equalToConstant: 100)
+        ])
+        
+        
         NSLayoutConstraint.activate([
             tableView.view.topAnchor.constraint(equalTo: self.view.topAnchor),
-            tableView.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -50),
+            tableView.view.bottomAnchor.constraint(equalTo: toolbar.view.topAnchor),
             tableView.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             tableView.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
             
-        ])
-        
-        NSLayoutConstraint.activate([
-            toolbar.view.topAnchor.constraint(equalTo: tableView.view.bottomAnchor),
-            toolbar.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            toolbar.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            toolbar.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)
         ])
         
     }

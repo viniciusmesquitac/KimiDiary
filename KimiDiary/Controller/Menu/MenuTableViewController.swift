@@ -69,7 +69,7 @@ class MenuTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = MenuHeaderView()
-        header.backgroundColor = .none
+        header.backgroundColor = .blueTheme
         return header
     }
     

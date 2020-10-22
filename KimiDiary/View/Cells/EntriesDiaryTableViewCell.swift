@@ -42,7 +42,7 @@ class EntriesDiaryTableViewCell: UITableViewCell {
         
     }()
     
-    fileprivate let titleEntry: UILabel = {
+    fileprivate var titleEntry: UILabel = {
         let label = UILabel()
         label.text = "Beautiful Day"
         label.textColor = .blueTheme
@@ -52,7 +52,7 @@ class EntriesDiaryTableViewCell: UITableViewCell {
         
     }()
     
-    fileprivate let descriptionEntry: UILabel = {
+    fileprivate var descriptionEntry: UILabel = {
         let label = UILabel()
         label.text = "Short Description that maybe end"
         label.textColor = .blueTheme
@@ -94,6 +94,11 @@ class EntriesDiaryTableViewCell: UITableViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configure(daily: Daily) {
+        self.titleEntry.text = daily.title
+        self.descriptionEntry.text = daily.bodyText
     }
     
     func buildViewHierarchy() {

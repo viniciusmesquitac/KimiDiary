@@ -19,6 +19,7 @@ class MenuToolbarController: UIViewController {
     
     lazy var customSearch: UIView = {
         let view = MenuToolbarView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         view.sizeToFit()
         return view
     }()

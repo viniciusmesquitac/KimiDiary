@@ -10,6 +10,12 @@ import UIKit
 
 class EntriesTableViewController: UITableViewController {
     
+    var entries: [Daily]? {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,13 +27,17 @@ class EntriesTableViewController: UITableViewController {
     }
     
     // MARK: Data Source
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        guard let entries = entries else { return 0 }
+        return entries.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: EntriesDiaryTableViewCell.identifier) as! EntriesDiaryTableViewCell
+        
+        guard let daily = entries?[indexPath.row] else { return cell }
+        cell.configure(daily: daily)
         return cell
     }
     
