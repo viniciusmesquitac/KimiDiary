@@ -42,7 +42,7 @@ class EntriesDiaryTableViewCell: UITableViewCell {
         
     }()
     
-    fileprivate let titleEntry: UILabel = {
+    fileprivate var titleEntry: UILabel = {
         let label = UILabel()
         label.text = "Beautiful Day"
         label.textColor = .blueTheme
@@ -52,38 +52,42 @@ class EntriesDiaryTableViewCell: UITableViewCell {
         
     }()
     
-    fileprivate let descriptionEntry: UILabel = {
+    fileprivate var descriptionEntry: UILabel = {
         let label = UILabel()
         label.text = "Short Description that maybe end"
         label.textColor = .blueTheme
+        label.adjustsFontSizeToFitWidth = true
+        label.font = UIFont.boldSystemFont(ofSize: 12)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    lazy var containerView: UIView = {
-        let view = UIView()
-        view.layer.borderColor = UIColor.black.cgColor
-        view.layer.borderWidth = 1
-        view.layer.cornerRadius = 8
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
+//    lazy var containerView: UIView = {
+//        let view = UIView()
+//        view.layer.borderColor = UIColor.black.cgColor
+//        view.layer.borderWidth = 1
+//        view.layer.cornerRadius = 8
+//        view.translatesAutoresizingMaskIntoConstraints = false
+//        return view
+//
+//    }()
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8))
         
-    }()
+        contentView.backgroundColor = .white
+        backgroundColor = .clear
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         
-        contentView.layoutMargins = UIEdgeInsets(top: 15, left: 3, bottom: 15, right: 3)//
-        self.contentView.addSubview(containerView)
 
-//        let view = UIView(frame: containerView.bounds)
-//        
-//        let redView = UIView(frame: containerView.layer.frame)
-//        redView.backgroundColor = .white
-//        self.backgroundView = redView
-//
-//        view.backgroundColor = .blue
-//        self.selectedBackgroundView = view
+        contentView.layer.cornerRadius = 8
+        self.selectionStyle = .none
+        // self.contentView.addSubview(containerView)
         buildViewHierarchy()
         setupConstraints()
     }
@@ -92,32 +96,37 @@ class EntriesDiaryTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func configure(daily: Daily) {
+        self.titleEntry.text = daily.title
+        self.descriptionEntry.text = daily.bodyText
+    }
+    
     func buildViewHierarchy() {
-        addSubview(dayLabel)
-        addSubview(dayWeekLabel)
-        addSubview(hourLabel)
-        addSubview(titleEntry)
-        addSubview(descriptionEntry)
+        contentView.addSubview(dayLabel)
+        contentView.addSubview(dayWeekLabel)
+        contentView.addSubview(hourLabel)
+        contentView.addSubview(titleEntry)
+        contentView.addSubview(descriptionEntry)
     }
     
     func setupConstraints() {
         
         NSLayoutConstraint.activate([
-            dayLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
-            dayLabel.topAnchor.constraint(equalTo: self.topAnchor)
+            dayLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 8),
+            dayLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor)
 
         ])
 
         NSLayoutConstraint.activate([
             dayWeekLabel.centerXAnchor.constraint(equalTo: self.dayLabel.centerXAnchor),
             dayWeekLabel.topAnchor.constraint(equalTo: self.dayLabel.bottomAnchor),
-            dayWeekLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            dayWeekLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 8)
 
         ])
 
         NSLayoutConstraint.activate([
             hourLabel.leadingAnchor.constraint(equalTo: self.dayLabel.trailingAnchor, constant: 8),
-            hourLabel.topAnchor.constraint(equalTo: self.topAnchor)
+            hourLabel.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 8)
 
         ])
 
@@ -128,25 +137,11 @@ class EntriesDiaryTableViewCell: UITableViewCell {
         ])
 
         NSLayoutConstraint.activate([
-            descriptionEntry.leadingAnchor.constraint(equalTo: self.dayLabel.trailingAnchor, constant: 8),
+            descriptionEntry.leadingAnchor.constraint(equalTo: self.titleEntry.leadingAnchor),
             descriptionEntry.topAnchor.constraint(equalTo: self.titleEntry.bottomAnchor),
-            descriptionEntry.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            descriptionEntry.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 8)
 
         ])
-        
-        NSLayoutConstraint.activate([
-            contentView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            contentView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
-            contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-            contentView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10)
-        ])
-        
-//        NSLayoutConstraint.activate([
-//            containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-//            containerView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10),
-//            containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
-//            containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10)
-//        ])
         
         
         

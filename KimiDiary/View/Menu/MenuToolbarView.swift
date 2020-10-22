@@ -8,6 +8,13 @@
 
 import UIKit
 
+enum MenuToolbarImages {
+    static let menu = UIImage(named: "menu")
+    static let gear = UIImage(named: "gear")
+    static let lupe = UIImage(named: "lupe")
+    static let pencil = UIImage(named: "pencil")
+}
+
 class MenuToolbarView: UIView {
     
     lazy var searchBar: SearchBarView = {
@@ -20,7 +27,7 @@ class MenuToolbarView: UIView {
     
     let buttonItem: UIButton = {
         let buttonItem = UIButton()
-        buttonItem.setImage(UIImage(named: "gear"), for: .normal)
+        buttonItem.setImage(MenuToolbarImages.gear, for: .normal)
         buttonItem.translatesAutoresizingMaskIntoConstraints = false
         return buttonItem
     }()
@@ -52,14 +59,13 @@ class MenuToolbarView: UIView {
         NSLayoutConstraint.activate([
             searchBar.topAnchor.constraint(equalTo: self.topAnchor, constant: 16),
             searchBar.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
-            searchBar.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8),
+            searchBar.heightAnchor.constraint(equalToConstant: 40),
             searchBar.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -50)
         ])
         
         NSLayoutConstraint.activate([
             buttonItem.leadingAnchor.constraint(equalTo: self.searchBar.trailingAnchor),
-            buttonItem.topAnchor.constraint(equalTo: self.topAnchor, constant: 5),
-            buttonItem.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            buttonItem.topAnchor.constraint(equalTo: self.searchBar.topAnchor, constant: 8),
             buttonItem.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         ])
         

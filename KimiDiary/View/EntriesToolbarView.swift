@@ -12,14 +12,14 @@ class EntriesToolbarView: UIView {
     
     lazy var menuItem: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "gear"), for: .normal)
+        button.setImage(MenuToolbarImages.menu, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     lazy var menuItem1: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "gear"), for: .normal)
+        button.setImage(MenuToolbarImages.pencil, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -44,7 +44,7 @@ class EntriesToolbarView: UIView {
         
         addSubview(menuItem)
         addSubview(menuItem1)
-        addSubview(menuItem2)
+        // addSubview(menuItem2)
         addSubview(labelEntries)
         
         setupConstraints()
@@ -70,12 +70,12 @@ class EntriesToolbarView: UIView {
             menuItem1.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
         
-        NSLayoutConstraint.activate([
-        
-            menuItem2.leadingAnchor.constraint(equalTo: self.menuItem1.trailingAnchor, constant: 16),
-            menuItem2.topAnchor.constraint(equalTo: self.topAnchor),
-            menuItem2.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-        ])
+//        NSLayoutConstraint.activate([
+//
+//            menuItem2.leadingAnchor.constraint(equalTo: self.menuItem1.trailingAnchor, constant: 16),
+//            menuItem2.topAnchor.constraint(equalTo: self.topAnchor),
+//            menuItem2.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+//        ])
         
         NSLayoutConstraint.activate([
         

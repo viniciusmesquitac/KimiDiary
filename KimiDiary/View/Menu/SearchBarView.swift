@@ -12,7 +12,8 @@ class SearchBarView: UIButton {
     
     let buttonItem: UIButton = {
         let buttonItem = UIButton()
-        buttonItem.setImage(UIImage(named: "lupa"), for: .normal)
+        buttonItem.setImage(MenuToolbarImages.lupe, for: .normal)
+        buttonItem.tintColor = .white
         buttonItem.translatesAutoresizingMaskIntoConstraints = false
         return buttonItem
     }()
@@ -27,7 +28,7 @@ class SearchBarView: UIButton {
     func setupConstraints() {
         
         NSLayoutConstraint.activate([
-            buttonItem.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 5),
+            buttonItem.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 8),
             buttonItem.topAnchor.constraint(equalTo: self.topAnchor),
             buttonItem.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])

@@ -12,9 +12,13 @@ class DiaryViewController: UIViewController {
     
     let entriesToolbarController = EntriesToolbarController()
     let entriesTableViewController = EntriesTableViewController(style: .insetGrouped)
+    let coreService = CoreService<Daily>(descriptionName: "Diary")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let entries = coreService.fetchAll()
+        entriesTableViewController.entries = entries
         
         buildViewHierarchy()
         setupConstraints()
@@ -23,8 +27,12 @@ class DiaryViewController: UIViewController {
     func buildViewHierarchy() {
         
         add(entriesTableViewController)
+        
+        entriesToolbarController.bossReference = self
         add(entriesToolbarController)
     }
+    
+   
     
     func setupConstraints() {
         
@@ -32,7 +40,7 @@ class DiaryViewController: UIViewController {
             entriesToolbarController.view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             entriesToolbarController.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
             entriesToolbarController.view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            entriesToolbarController.view.heightAnchor.constraint(equalToConstant: 50)
+            entriesToolbarController.view.heightAnchor.constraint(equalToConstant: 80)
         ])
         
         NSLayoutConstraint.activate([
@@ -42,5 +50,13 @@ class DiaryViewController: UIViewController {
             entriesTableViewController.view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
         ])
         
+    }
+}
+
+
+extension DiaryViewController: WriteEntryDelegate {
+    func didUpdateTableView() {
+        let entries = coreService.fetchAll()
+        entriesTableViewController.entries = entries
     }
 }
