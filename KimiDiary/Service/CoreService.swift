@@ -23,7 +23,6 @@ protocol ConfigurableCoreService {
     associatedtype Vertix
     func insert(object: Vertix)
     func delete(object: Vertix)
-    func update(object: Vertix, parameters: [AnyHashable: String])
     func fetchAll() -> [Vertix]?
 }
 
@@ -49,6 +48,7 @@ final class CoreService<Vertix: NSManagedObject>: ConfigurableCoreService {
             return
         }
         self.graph = appDelegate.persistentContainer.viewContext
+        self.graph?.automaticallyMergesChangesFromParent = true
     }
     
     public func new() -> Vertix {
@@ -56,20 +56,6 @@ final class CoreService<Vertix: NSManagedObject>: ConfigurableCoreService {
         return NSEntityDescription.insertNewObject(forEntityName: Vertix.entityName, into: graph!) as! Vertix
     }
     
-//    public func save(object: Vertix, parameters: [AnyHashable: String]) {
-//
-//        // Gera uma entidade com descrição para o grafo, apenas com o nome da entidade.
-//        guard let description = NSEntityDescription.entity(forEntityName: Vertix.entityName, in: graph!) else { fatalError() }
-//
-//        // Gera um objeto grafo que será adicionado no contexto.
-//        let object = NSManagedObject(entity: description, insertInto: graph!)
-//
-//        // Adiciona os valores adicionados nos parametros.
-//        for (value, key) in parameters {
-//            object.setValue(value, forKey: key)
-//        }
-//    }
-//
     public func fetchAll() -> [Vertix]? {
         // Solicitação de request do vertice passando o critério "Vertix.className"
         let request = NSFetchRequest<Vertix>(entityName: Vertix.entityName)
@@ -85,28 +71,6 @@ final class CoreService<Vertix: NSManagedObject>: ConfigurableCoreService {
     
     public func insert(object: Vertix) {
         graph?.insert(object)
-        save()
-    }
-    
-    
-    func update(object: Vertix, parameters: [AnyHashable: String]) {
-        let request = NSFetchRequest<Vertix>(entityName: Vertix.entityName)
-        
-        // Gera um predicate do request buscando o vertix por ID.
-        let predicate = NSPredicate(format: "ID = 1")
-        request.predicate = predicate
-        
-        // Outra forma: -> let object = try! graph?.existingObject(with: object!.objectID)
-        
-        // Recuperar objeto do grafo através de um request.
-        let object = try! graph?.fetch(request).first
-        
-        // Alterar os parametros especificados.
-        for (value, key) in parameters {
-            object?.setValue(value, forKey: key)
-        }
-        
-        // Salva o contexto/grafo.
         save()
     }
     
