@@ -10,6 +10,9 @@ import UIKit
 
 class EntriesTableViewController: UITableViewController {
     
+    
+    let coreService = CoreService<Daily>(descriptionName: "Diary")
+    
     var entries: [Daily]? {
         didSet {
             tableView.reloadData()
@@ -22,6 +25,7 @@ class EntriesTableViewController: UITableViewController {
         self.view.translatesAutoresizingMaskIntoConstraints = false
         self.tableView.rowHeight = 95
         self.tableView.separatorStyle = .none
+        self.tableView.backgroundColor = .white
         self.tableView
             .register(EntriesDiaryTableViewCell.self, forCellReuseIdentifier: EntriesDiaryTableViewCell.identifier)
     }
@@ -58,6 +62,29 @@ class EntriesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("selection")
     }
-
+    
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete"){ (_, _, success) in
+            self.delete(forRowAt: indexPath)
+            success(true)
+        }
+        let configure: UISwipeActionsConfiguration
+        configure = UISwipeActionsConfiguration(actions: [delete])
+        configure.performsFirstActionWithFullSwipe = false
+        return configure
+    }
+    
+    func delete(forRowAt indexPath: IndexPath) {
+        guard var entries = entries else { return }
+        tableView.beginUpdates()
+        coreService.delete(object: entries[indexPath.row])
+        entries.remove(at: indexPath.row)
+        self.entries = entries
+        tableView.deleteRows(at: [indexPath], with: .right)
+        tableView.endUpdates()
+    }
+    
     
 }

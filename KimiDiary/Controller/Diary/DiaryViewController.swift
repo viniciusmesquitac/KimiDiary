@@ -11,12 +11,12 @@ import UIKit
 class DiaryViewController: UIViewController {
     
     let entriesToolbarController = EntriesToolbarController()
-    let entriesTableViewController = EntriesTableViewController(style: .insetGrouped)
+    let entriesTableViewController = EntriesTableViewController()
     let coreService = CoreService<Daily>(descriptionName: "Diary")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = .white
         let entries = coreService.fetchAll()
         entriesTableViewController.entries = entries
         

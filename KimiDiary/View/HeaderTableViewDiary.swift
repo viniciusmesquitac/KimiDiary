@@ -20,13 +20,22 @@ class HeaderTableViewDiary: UIView {
     fileprivate let titleHeader: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.tintColor = .blueTheme
         label.text = "Diary"
         return label
     }()
     
+    let line: UIView = {
+           let view = UIView()
+        view.backgroundColor = .gray
+           view.translatesAutoresizingMaskIntoConstraints = false
+           return view
+       }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        self.backgroundColor = .white
         buildViewHierarchy()
         setupConstraints()
     }
@@ -37,6 +46,7 @@ class HeaderTableViewDiary: UIView {
     
     func buildViewHierarchy() {
         addSubview(titleHeader)
+        addSubview(line)
         addSubview(segmentedControl)
     }
     
@@ -53,6 +63,13 @@ class HeaderTableViewDiary: UIView {
             titleHeader.topAnchor.constraint(equalTo: self.segmentedControl.bottomAnchor, constant: 8),
             titleHeader.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 10),
             titleHeader.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            line.bottomAnchor.constraint(equalTo: bottomAnchor),
+            line.leadingAnchor.constraint(equalTo: leadingAnchor),
+            line.trailingAnchor.constraint(equalTo: trailingAnchor),
+            line.heightAnchor.constraint(equalToConstant: 1)
         ])
         
     }

@@ -23,8 +23,6 @@ enum MenuTableImages {
 
 class MenuTableViewController: UITableViewController {
     
-//    var presentTransition: UIViewControllerAnimatedTransitioning?
-//    var dismissTransition: UIViewControllerAnimatedTransitioning?
     let items = ["Emergency", "@User2323", "DIARY", "Prohibited Matter"]
     
     override func viewDidLoad() {

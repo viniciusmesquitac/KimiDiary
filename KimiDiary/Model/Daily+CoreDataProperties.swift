@@ -2,7 +2,7 @@
 //  Daily+CoreDataProperties.swift
 //  KimiDiary
 //
-//  Created by Vinicius Mesquita on 22/10/20.
+//  Created by Vinicius Mesquita on 23/10/20.
 //  Copyright © 2020 Vinicius Mesquita. All rights reserved.
 //
 //
@@ -18,7 +18,7 @@ extension Daily {
     }
 
     @NSManaged public var bodyText: String?
-    @NSManaged public var date: Double
+    @NSManaged public var date: Date?
     @NSManaged public var title: String?
 
 }

@@ -77,7 +77,7 @@ class EntriesDiaryTableViewCell: UITableViewCell {
 
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8))
         
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = .lightGray
         backgroundColor = .clear
     }
     
@@ -97,8 +97,32 @@ class EntriesDiaryTableViewCell: UITableViewCell {
     }
     
     func configure(daily: Daily) {
+        let calendar = Calendar.current
         self.titleEntry.text = daily.title
         self.descriptionEntry.text = daily.bodyText
+        
+        if let date = daily.date {
+            let day = calendar.component(.day, from: date)
+            let hour = calendar.component(.hour, from: date)
+            let minutes = calendar.component(.minute, from: date)
+            let weekday = calendar.component(.weekday, from: date)
+            
+            self.dayLabel.text = "\(day)"
+            self.hourLabel.text = "\(hour):\(minutes)"
+            
+            switch weekday {
+            case 2: self.dayWeekLabel.text = "Mon"; case 3: self.dayWeekLabel.text = "Tue";
+            case 4: self.dayWeekLabel.text = "Wed"; case 5: self.dayWeekLabel.text = "Thurs";
+            case 6: self.dayWeekLabel.text = "Fri"; case 7: self.dayWeekLabel.text = "Sat";
+            case 1: self.dayWeekLabel.text = "Sun";
+
+            default:
+                self.dayWeekLabel.text = "Fri"
+            }
+        }
+   
+        
+        
     }
     
     func buildViewHierarchy() {

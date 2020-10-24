@@ -2,10 +2,10 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17192" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Daily" representedClassName="Daily" syncable="YES">
         <attribute name="bodyText" optional="YES" attributeType="String"/>
-        <attribute name="date" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Daily" positionX="-63" positionY="-18" width="128" height="28"/>
+        <element name="Daily" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>
