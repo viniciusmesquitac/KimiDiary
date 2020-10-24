@@ -31,17 +31,15 @@ class WriteEntryViewController: UIViewController {
         
         let bodyText = contentView.writeDescriptionTextField.text
         let title = contentView.writeTitleTextField.text
-        
         let daily = coreService.new()
         daily.bodyText = bodyText
         daily.title = title
+        daily.date = Date()
         coreService.save()
         
         delegate?.didUpdateTableView()
         
         self.dismiss(animated: true, completion: nil)
-        
-        print("Saved!")
     }
     
     override func viewDidLoad() {

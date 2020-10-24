@@ -13,6 +13,7 @@ class EntriesToolbarView: UIView {
     lazy var menuItem: UIButton = {
         let button = UIButton()
         button.setImage(MenuToolbarImages.menu, for: .normal)
+        button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -20,6 +21,7 @@ class EntriesToolbarView: UIView {
     lazy var menuItem1: UIButton = {
         let button = UIButton()
         button.setImage(MenuToolbarImages.pencil, for: .normal)
+        button.tintColor = .white
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -35,6 +37,7 @@ class EntriesToolbarView: UIView {
     lazy var labelEntries: UILabel = {
         let label = UILabel()
         label.text = "11 Entries"
+        label.tintColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

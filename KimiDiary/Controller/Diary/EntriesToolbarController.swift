@@ -14,7 +14,7 @@ class EntriesToolbarController: UIViewController {
     
     lazy var toolbarView: EntriesToolbarView = {
         let toolbar = EntriesToolbarView()
-        toolbar.backgroundColor = .white
+        toolbar.backgroundColor = .blueTheme
         toolbar.translatesAutoresizingMaskIntoConstraints = false
         return toolbar
     }()

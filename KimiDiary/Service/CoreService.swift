@@ -56,20 +56,20 @@ final class CoreService<Vertix: NSManagedObject>: ConfigurableCoreService {
         return NSEntityDescription.insertNewObject(forEntityName: Vertix.entityName, into: graph!) as! Vertix
     }
     
-    public func save(object: Vertix, parameters: [AnyHashable: String]) {
-        
-        // Gera uma entidade com descrição para o grafo, apenas com o nome da entidade.
-        guard let description = NSEntityDescription.entity(forEntityName: Vertix.entityName, in: graph!) else { fatalError() }
-        
-        // Gera um objeto grafo que será adicionado no contexto.
-        let object = NSManagedObject(entity: description, insertInto: graph!)
-        
-        // Adiciona os valores adicionados nos parametros.
-        for (value, key) in parameters {
-            object.setValue(value, forKey: key)
-        }
-    }
-    
+//    public func save(object: Vertix, parameters: [AnyHashable: String]) {
+//
+//        // Gera uma entidade com descrição para o grafo, apenas com o nome da entidade.
+//        guard let description = NSEntityDescription.entity(forEntityName: Vertix.entityName, in: graph!) else { fatalError() }
+//
+//        // Gera um objeto grafo que será adicionado no contexto.
+//        let object = NSManagedObject(entity: description, insertInto: graph!)
+//
+//        // Adiciona os valores adicionados nos parametros.
+//        for (value, key) in parameters {
+//            object.setValue(value, forKey: key)
+//        }
+//    }
+//
     public func fetchAll() -> [Vertix]? {
         // Solicitação de request do vertice passando o critério "Vertix.className"
         let request = NSFetchRequest<Vertix>(entityName: Vertix.entityName)

@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
+        
+        persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
+        
         if systemVersion <= 12.9 {
             _ = AppRouter.init(window: window)
         }
