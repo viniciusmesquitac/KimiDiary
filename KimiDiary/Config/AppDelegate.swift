@@ -19,10 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        
-        
-        persistentContainer.viewContext.automaticallyMergesChangesFromParent = true
-        
         if systemVersion <= 12.9 {
             _ = AppRouter.init(window: window)
         }
@@ -46,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "Diary")
+        let container = NSPersistentCloudKitContainer(name: "Diary")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -54,7 +50,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
-    
     
     // MARK: - Core Data Saving support
 
